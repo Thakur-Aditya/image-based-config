@@ -1,8 +1,7 @@
 import axios from "axios";
 
-const PORT = process.env.PORT;
 const API_BASE_URL =
-  typeof window === "undefined" ? `http://localhost:${PORT}/api` : "/api";
+  typeof window === "undefined" ? `https://image-based-config.vercel.app/api` : "/api";
 
 export interface Project {
   id: string;
