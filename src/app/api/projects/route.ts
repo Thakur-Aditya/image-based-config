@@ -10,9 +10,9 @@ export async function GET() {
     });
 
     return NextResponse.json(projects);
-  } catch (error) {
+  } catch (err) {
     return NextResponse.json(
-      { error: "Failed to fetch projects" },
+      { error: "Failed to fetch projects",err },
       { status: 500 }
     );
   }
