@@ -7,10 +7,11 @@ import { NextRequest } from "next/server";
 
 export async function DELETE(
   req: NextRequest,
-{ params }: { params: { projectId: string } }
+  { params }: { params: Promise<{ projectId: string }> }
 ) {
   try {
-    const  projectId  = params.projectId;
+    // const  projectId  = params.projectId;
+    const { projectId } = await params;
     console.log("This is the project id" + projectId);
 
     // Find the project and its images
