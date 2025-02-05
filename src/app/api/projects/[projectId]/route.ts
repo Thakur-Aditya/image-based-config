@@ -1,13 +1,16 @@
 import { NextResponse } from "next/server";
 import prisma from "@/lib/prisma";
-import { NextRequest } from "next/server";
+// import { NextRequest } from "next/server";
+
+// request: Request,
+// context: { params: { projectId: string } }
 
 export async function DELETE(
-  req: NextRequest,
+  req: Request,
   { params }: { params: { projectId: string } }
 ) {
   try {
-    const { projectId } = params;
+    const  projectId  = params.projectId;
     console.log("This is the project id" + projectId);
 
     // Find the project and its images
