@@ -16,7 +16,7 @@ export default function ProjectList() {
 
   const loadProjects = async () => {
     try {
-      const response = await fetch("/api/projects");
+      const response = await fetch("https://image-based-config.vercel.app/api/projects");
       const data = await response.json();
       if (response.ok) {
         setProjects(data);
