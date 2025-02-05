@@ -5,7 +5,7 @@ import prisma from "@/lib/prisma";
 // request: Request,
 // context: { params: { projectId: string } }
 
-export async function DELETE(
+export async function GET(
   req: Request,
   { params }: { params: { projectId: string } }
 ) {
