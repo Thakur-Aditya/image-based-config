@@ -1,13 +1,12 @@
 import { NextResponse } from "next/server";
 import prisma from "@/lib/prisma";
-import type { NextRequest } from "next/server";
 
 export async function DELETE(
-  req: NextRequest,
-   context : { params: { projectId: string } }
+  req: Request,
+  { params }: { params: { projectId: string } }
 ) {
   try {
-    const { projectId } = await context.params;
+    const { projectId } = await params;
     console.log("This is the project id" + projectId);
 
     // Find the project and its images
@@ -40,11 +39,11 @@ export async function DELETE(
   }
 }
 export async function GET(
-  req: NextRequest,
-  context : { params: { projectId: string } }
+  req: Request,
+  { params }: { params: { projectId: string } }
 ) {
   try {
-    const { projectId } = await context.params;
+    const { projectId } = await params;
     console.log("This is the project id" + projectId);
 
     // Find the project and its images
