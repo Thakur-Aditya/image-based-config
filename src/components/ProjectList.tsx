@@ -22,7 +22,7 @@ export default function ProjectList() {
         setProjects(data);
         setError(null);
       } else {
-        setError(data.error || "Failed to load projects");
+        setError(data.err || "Failed to load projects");
       }
     } catch (err) {
       // setError("Failed to load projects");
