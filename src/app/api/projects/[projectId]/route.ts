@@ -6,7 +6,7 @@ export async function DELETE(
   { params }: { params: { projectId: string } }
 ) {
   try {
-    const { projectId } = await params;
+    const { projectId } = params;
     console.log("This is the project id" + projectId);
 
     // Find the project and its images
