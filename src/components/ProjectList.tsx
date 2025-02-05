@@ -92,6 +92,7 @@ export default function ProjectList() {
       setProjects(projects.filter((project) => project.id !== projectId));
       setError(null);
     } catch (err) {
+      console.log(err)
       setError(err instanceof Error ? err.message : "Failed to delete project");
     }
   };
